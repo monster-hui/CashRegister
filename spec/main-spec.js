@@ -1,3 +1,4 @@
+﻿
 describe('pos', function () {
     var inputs;
 
@@ -31,4 +32,3 @@ describe('pos', function () {
 
         expect(console.log).toHaveBeenCalledWith(expectText);
     });
-});

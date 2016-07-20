@@ -1,3 +1,4 @@
+
 function printInventory(inputs) {
     var inputItems=[];
     var prettyInfo={"sum":0};
@@ -10,4 +11,4 @@ function printInventory(inputs) {
         prettyInfo.sum += input.price * input.count;
   })
     console.log(FormatPrint.format(inputItems,prettyInfo));
-}
+
