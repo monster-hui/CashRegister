@@ -1,35 +1,24 @@
-﻿
 describe('pos', function () {
-
-    var inputs;
-
-    beforeEach(function () {
-        inputs = [
-            'ITEM000000',
-            'ITEM000000',
-            'ITEM000000',
-            'ITEM000000',
-            'ITEM000000',
-            'ITEM000001',
-            'ITEM000001',
-            'ITEM000004'
-        ];
+    it('should print detailed list of goods without benefit  ', function () {
+         spyOn(console, 'log');
+        printInventory(inputs[0]);
+        expect(console.log).toHaveBeenCalledWith(outputdata[0]);
+    });
+    it('should print detailed list of goods with buy-two-get-one', function () {
+         spyOn(console, 'log');
+        printInventory(inputs[1]);
+        expect(console.log).toHaveBeenCalledWith(outputdata[1]);
     });
 
-    it('should print correct text', function () {
-
-        spyOn(console, 'log');
-
-        printInventory(inputs);
-
-        var expectText =
-            '***<没钱赚商店>购物清单***\n' +
-            '名称：可口可乐，数量：5瓶，单价：3.00(元)，小计：15.00(元)\n'+
-        '名称：百事可乐，数量：2瓶，单价：3.00(元)，小计：6.00(元)\n'+
-        '名称：萨姆奶茶，数量：1瓶，单价：4.00(元)，小计：4.00(元)\n' +
-            '----------------------\n' +
-            '总计：25.00(元)\n' +
-            '**********************';
-
-        expect(console.log).toHaveBeenCalledWith(expectText);
+    it('should print detailed list of goods with 95%-off', function () {
+         spyOn(console, 'log');
+        printInventory(inputs[2]);
+        expect(console.log).toHaveBeenCalledWith(outputdata[2]);
     });
+
+    it('should print detailed list of goods with buy-two-get-one  and 95%-off ', function () {
+     spyOn(console, 'log');
+        printInventory(inputs[3]);
+        expect(console.log).toHaveBeenCalledWith(outputdata[3]);
+    });
+});

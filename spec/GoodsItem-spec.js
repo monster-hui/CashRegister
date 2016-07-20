@@ -1,9 +1,5 @@
-describe('GoodsItem ', function () {
-
-    beforeEach(function () {
-
-    });
-
+describe('  GoodsItem ', function () {
+    
     it('should be able to constructed correctly', function () {
 
         var item = new GoodsItem({"barcode": "ITEM000000","name": "可口可乐350ml","unit": "瓶","category": "食品","subCategory": "碳酸饮料","price": "3.00"});

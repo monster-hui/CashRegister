@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收银机</title>
+
+    <script type="text/javascript" src="./lib/lodash-2.4.1/lodash.compat.js"></script>
+    <script type="text/javascript" src="./lib/moment-2.8.1/moment-with-locales.js"></script>
+
+    <script type="text/javascript" src="./data/goods.js"></script>
+    <script type="text/javascript" src="./data/benefitgoods.js"></script>
+    <script type="text/javascript" src="./data/inputdata.js"></script>
+    <!--include source files here... -->
+    <script type="text/javascript" src="./src/main.js"></script>
+    <script type="text/javascript" src="src/formatPrint.js"></script>
+    <script type="text/javascript" src="./src/GoodsItem.js"></script>
+    <script type="text/javascript" src="src/formatInputItems.js"></script>
+    <script type="text/javascript" src="./src/benefit.js"></script>
+</head>
+<body>
+<h1>请按F12在控制台查看输出结果。</h1>
+</body>
+<script type="text/javascript">
+    console.log("无优惠信息下的输出：")
+    console.log("\n")
+    printInventory(inputs[0]);
+    console.log("\n\n\n")
+    console.log("只有买二送一优惠的输出:")
+    console.log("\n")
+    printInventory(inputs[1]);
+    console.log("\n\n\n")
+    console.log("只有95折优惠的输出:")
+    console.log("\n")
+    printInventory(inputs[2]);
+    console.log("\n\n\n")
+    console.log("既有买二送一又有95折优惠的输出:")
+    console.log("\n")
+    printInventory(inputs[3]);
+</script>
+</html>
