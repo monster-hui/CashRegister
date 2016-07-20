@@ -1,4 +1,4 @@
-describe('pos', function () {
+﻿describe('pos', function () {
     var inputs;
 
     beforeEach(function () {
@@ -31,4 +31,5 @@ describe('pos', function () {
 
         expect(console.log).toHaveBeenCalledWith(expectText);
     });
+
 });
